@@ -20,8 +20,10 @@ class StringBuilder {
     this.#value = this.#value + value;
   }
 
+  //use methods above to create new method padBoth
   padBoth(value) {
-    this.#value = value + this.#value + value;
+    this.padStart(value);
+    this.padEnd(value);
   }
 }
 

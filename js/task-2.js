@@ -15,9 +15,12 @@ class Storage {
     this.#items.push(newItem);
   }
 
-  //remove item if found in array (using filter method)
+  //remove item if found in array (using indexOf method)
   removeItem(itemToRemove) {
-    this.#items = this.#items.filter(el => el !== itemToRemove);
+    const itemIndex = this.#items.indexOf(itemToRemove);
+    if (itemIndex !== -1) {
+      this.#items.splice(itemIndex, 1);
+    }
   }
 }
 
